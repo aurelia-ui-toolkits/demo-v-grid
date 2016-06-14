@@ -9,9 +9,7 @@ var nonSampleBundle = [
   "[installation/*.js]",
   "installation/*.html!text",
   "[about/*.js]",
-  "about/*.html!text",
-  "[theme-selector/*.js]",
-  "theme-selector/*.html!text"
+  "about/*.html!text"
 ];
 
 var aureliaBundle = [
@@ -23,28 +21,25 @@ var aureliaBundle = [
   "aurelia-templating-router",
   "aurelia-loader-default",
   "aurelia-history-browser",
-  "aurelia-logging-console"
+  "aurelia-logging-console",
+  "aurelia-fetch-client"
 ];
 
 var pluginsBundle = [
-  "[aurelia-kendoui-bridge]",
-  "[aurelia-kendoui-bridge/**/*.js]",
-  "aurelia-kendoui-bridge/**/*.html!text",
+  "aurelia-v-grid",
+  "aurelia-v-grid/**/*.js",
+  "aurelia-v-grid/**/*.html!text",
   "showdown",
   "prism",
   "jquery",
   "css",
   "text",
-  // "core-js",
   "json",
   "core-js/library/**/*",
   "babel",
   'showdown-prettify',
-  // "core-js/client/**/*",
-  // "babel",
-  // "babel/browser/**/*",
-  // "babel-runtime/helpers/**/*",
-  // "babel-runtime/core-js/**/*",
+  "moment",
+  "numeral",
   "bootstrap",
   "bootstrap/css/bootstrap.css!text"
 ];
@@ -61,26 +56,6 @@ module.exports = {
         "inject": true,
         "minify": true,
         "rev": true
-      }
-    },
-    "src/kendo-build": {
-      "includes": ["kendo-ui/js/*"],
-      "excludes": [
-        "[kendo-ui/js/angular.min.js]",
-        "[kendo-ui/js/jquery.min.js]",
-        "[kendo-ui/js/kendo.angular.min.js]",
-        "[kendo-ui/js/kendo.angular2.min.js]",
-        "[kendo-ui/js/kendo.spreadsheet.min.js]",
-        "[kendo-ui/js/kendo.all.min.js]",
-        "[kendo-ui/js/kendo.web.min.js]",
-        "[kendo-ui/js/kendo.dataviz.min.js]",
-        "[kendo-ui/js/kendo.dataviz.mobile.min.js]",
-        "[kendo-ui/js/kendo.mobile.min.js]"
-      ],
-      "options": {
-        "inject": true,
-        "minify": true,
-        "rev": false
       }
     }
   }
