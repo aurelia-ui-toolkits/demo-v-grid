@@ -11,26 +11,9 @@ export class BasicUse {
   //collection to display
   myCollection = [];
 
-  onRowDraw(data) {
-    if (data) {
-      if (data.tempRef) {
-        if (data.tempRef.number > 100) {
-          data.tempRef.numberColor = "green";
-          data.tempRef.numberFont = "normal";
-        } else {
-          data.tempRef.numberColor = "red";
-          data.tempRef.numberFont = "bold";
-        }
-      }
-    }
-  }
 
-  singleClick(e) {
-    console.log("click")
-  }
-
-  singleDblClick(e) {
-    console.log("dblClick")
+  collectionChange(e){
+    console.log(e)
   }
 
   //helper for dummy data
@@ -42,8 +25,21 @@ export class BasicUse {
     });
 
     this.context = this;
-    this.showButtonsForm = false;
+    this.showOnlySelected = false;
 
+  }
+
+  showSelectedBtn(){
+    this.myGrid.ctx.showOnlySelected();
+
+  }
+
+  showAll(){
+    this.myGrid.ctx.showSelectedAndNotSelected();
+  }
+
+  showOnlyNotSelected(){
+    this.myGrid.ctx.showOnlyNotSelected();
   }
 
 

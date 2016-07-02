@@ -49,6 +49,17 @@ export class BasicUse {
   }
 
 
+  remotePagerEvent(e){
+    console.log(e)
+  }
+
+
+  myLang={
+    menuMainHeaderOptions:"dine valg",
+    pagerBtnNext:"neste",
+    pagerStringOf:"#"
+  };
+
 
   loadData() {
     this.myGrid.ctx.setLoadingOverlay(true);
