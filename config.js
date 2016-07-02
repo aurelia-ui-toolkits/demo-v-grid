@@ -1,7 +1,7 @@
 System.config({
-  defaultJSExtensions: true,
-  transpiler: "babel",
-  babelOptions: {
+  "defaultJSExtensions": true,
+  "transpiler": "babel",
+  "babelOptions": {
     "optional": [
       "runtime",
       "optimisation.modules.system",
@@ -9,19 +9,17 @@ System.config({
       "es7.classProperties"
     ]
   },
-  paths: {
+  "paths": {
     "*": "src/*",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
-
-  meta: {
+  "meta": {
     "showdown/dist/showdown.js": {
       "format": "global"
     }
   },
-
-  map: {
+  "map": {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0-rc.1.0.0",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-rc.1.0.1",
     "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0-rc.1.0.0",
@@ -410,4 +408,4 @@ System.config({
       "y18n": "npm:y18n@3.2.1"
     }
   }
-});
+})
